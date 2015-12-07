@@ -5,7 +5,7 @@ import App from './App';
 import { createHistory, useBasename } from 'history';
 
 const history = useBasename(createHistory)({
-  basename: '/react-comx',
+  basename: '/countdown-clock',
 });
 
 const Routes = (
