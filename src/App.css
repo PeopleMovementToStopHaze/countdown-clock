@@ -8,6 +8,19 @@ body {
   margin: 0;
 }
 
+.root {
+  background-image: url("/src/assets/place_on_fire.png");
+  background-position: 400cm 75cm;
+  /*background-repeat: no-repeat;*/
+  opacity: 0.4;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
 .content_container {
   padding: 30px;
   display: flex;
@@ -20,7 +33,7 @@ body {
 
 @media screen and (min-width: 1080px) {
     .content_container {
-        width: 50%;
+        width: 60%;
     }
 }
 
@@ -30,6 +43,7 @@ body {
 
 .header_container {
   display: flex;
+  flex-direction: column;
   margin: auto;
   width: 80%;
 }
@@ -40,7 +54,7 @@ body {
     }
     .content_container {
         width: 100%;
-        padding: 0;
+        padding: 30px 0;
         margin: 0;
     }
     .header_container {
@@ -50,17 +64,33 @@ body {
 }
 
 .header {
-  font-size: 40px;
+  color: white;
+  font-size: 50px;
   letter-spacing: .05em;
   width: 70%;
-  margin: auto;
+  margin: 10px auto;
+  text-align: center;
+  text-shadow: 1px 1px #fe4902,
+               2px 2px #fe4902,
+               3px 3px #fe4902,
+               4px 4px #fe4902,
+               5px 5px #fe4902,
+               6px 6px #fe4902;
 }
 
 .header_sm {
-  font-size: 25px;
+  color: white;
+  font-size: 35px;
   letter-spacing: .05em;
   width: 70%;
-  margin: auto;
+  margin: 10px auto;
+  text-align: center;
+  text-shadow: 1px 1px #fe4902,
+               2px 2px #fe4902,
+               3px 3px #fe4902,
+               4px 4px #fe4902,
+               5px 5px #fe4902,
+               6px 6px #fe4902;
 }
 
 .img {

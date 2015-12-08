@@ -163,7 +163,7 @@ class CountdownTimer extends Component {
       const timeMeasure = this._timeMeasure[format];
       const percent = 2 * parseInt(this.state[format], 10) / timeMeasure - 4.5;
       const propsName = '_' + format + 'CanvasContext';
-      this[propsName].globalAlpha = 2 / 3;
+      this[propsName].globalAlpha = 1;
       this[propsName].fillStyle = this.props.textColor;
       this[propsName].font = this.props.fontSize + 'px ' + 'Roboto';
       this[propsName].fillText(this.state[format], this._radius, this._radius - 15, );
