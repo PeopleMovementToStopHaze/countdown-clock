@@ -9,7 +9,7 @@ body {
 }
 
 .root {
-  background-image: url("/src/assets/place_on_fire.png");
+  background-image: url("assets/place_on_fire.png");
   background-position: 400cm 75cm;
   /*background-repeat: no-repeat;*/
   opacity: 0.4;
