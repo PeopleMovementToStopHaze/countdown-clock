@@ -22,9 +22,13 @@ module.exports = {
     // ],
     loaders: [
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|gif|svg)$/,
         loader: 'url',
         query: {limit: 10240},
+      },
+      {
+        test: /\.png$/,
+        loader: 'file-loader',
       },
       {
         test: /\.js$/,
