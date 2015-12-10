@@ -142,7 +142,7 @@ class CountdownTimer extends Component {
     this._parsedFormatArr.map(format => {
       const propsName = '_' + format + 'CanvasContext';
       this[propsName].beginPath();
-      this[propsName].globalAlpha = 1 / 3;
+      this[propsName].globalAlpha = 0;
       this[propsName].fillStyle = this.props.colorFinished;
       this[propsName].arc(this._radius, this._radius, this._radius, 0, Math.PI * 2, false);
       this[propsName].arc(this._radius, this._radius, this._radius / 1.3, Math.PI * 2, 0, true);
