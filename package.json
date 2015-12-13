@@ -2,17 +2,23 @@
   "name": "countdown-clock",
   "version": "1.0.0",
   "description": "React Countdown Clock",
+  "main": "src/index.js",
   "keywords": [
     "react"
   ],
   "author": "Lai Chia Sheng <jason0911520@gmail.com> (http://github.com/groupystinks)",
   "license": "MIT",
-  "homepage": "https://github.com/PeopleMovementToStopHaze/countdown-clock",
+  "bugs": "https://github.com/PeopleMovementToStopHaze/countdown-clock/issues",
+  "homepage": "http://peoplemovementtostophaze.github.io/countdown-clock",
   "scripts": {
     "dev": "node server",
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --config webpack.prod.config.js",
     "publish": "npm run build && cp gh-pages.html dist/index.html && git checkout gh-pages && cp dist/* . && git commit -am 'Code update' && git push origin gh-pages && git checkout master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeopleMovementToStopHaze/countdown-clock"
   },
   "devDependencies": {
     "autoprefixer-core": "6.0.1",
