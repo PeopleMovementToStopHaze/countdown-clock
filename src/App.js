@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CountdownClock from './CountdownClock/CountdownClock';
+import CountdownClock from '../lib/countdown-clock';
 import Colors from 'utils/ColorCollection';
 
 export default class App extends Component {

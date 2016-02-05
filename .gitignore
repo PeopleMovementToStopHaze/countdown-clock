@@ -1,3 +1,14 @@
 node_modules/
 dist/
 npm-debug.log
+.eslintignore
+.eslintrc
+gh-pages.html
+index.html
+server.js
+webpack.config.js
+webpack.prod.config.js
+src/utils
+src/App.css
+src/App.js
+src/client.js

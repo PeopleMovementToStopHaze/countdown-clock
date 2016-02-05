@@ -1,8 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 
-const styles = require('./CountdownClock.css');
-
 class CountdownClock extends Component {
   static displayName = 'CountdownClock';
 
@@ -180,13 +178,12 @@ class CountdownClock extends Component {
   render() {
     const format = (this._parseFormat(this._format));
     return (
-      <div className={ styles.root_container }>
+      <div>
         <section
-          className={ styles.timer_container }
           id="countdown"
           ref="countdown">
             {format.day ? (
-            <div className={styles.canvas_container}>
+            <div>
               <canvas
                 className="react-countdown-clock"
                 ref="year_canvas"
@@ -195,7 +192,7 @@ class CountdownClock extends Component {
               </canvas>
             </div> ) : null}
             {format.day ? (
-            <div className={styles.canvas_container}>
+            <div>
               <canvas
                 className="react-countdown-clock"
                 ref="day_canvas"
@@ -204,7 +201,7 @@ class CountdownClock extends Component {
               </canvas>
             </div> ) : null}
             {format.hour ? (
-            <div className={styles.canvas_container}>
+            <div>
               <canvas
                 className="react-countdown-clock"
                 ref="hour_canvas"
@@ -213,7 +210,7 @@ class CountdownClock extends Component {
               </canvas>
             </div> ) : null}
             {format.minute ? (
-            <div className={styles.canvas_container}>
+            <div>
               <canvas
                 className="react-countdown-clock"
                 ref="minute_canvas"
@@ -222,7 +219,7 @@ class CountdownClock extends Component {
               </canvas>
             </div> ) : null}
             {format.second ? (
-            <div className={styles.canvas_container}>
+            <div>
               <canvas
                 className="react-countdown-clock"
                 ref="second_canvas"
