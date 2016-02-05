@@ -1,6 +1,6 @@
 {
   "name": "countdown-clock",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Countdown Clock",
   "main": "lib/countdown-clock.js",
   "keywords": [
