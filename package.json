@@ -2,7 +2,7 @@
   "name": "countdown-clock",
   "version": "1.0.0",
   "description": "React Countdown Clock",
-  "main": "src/index.js",
+  "main": "lib/countdown-clock.js",
   "keywords": [
     "react"
   ],
@@ -11,6 +11,7 @@
   "bugs": "https://github.com/PeopleMovementToStopHaze/countdown-clock/issues",
   "homepage": "http://peoplemovementtostophaze.github.io/countdown-clock",
   "scripts": {
+    "npm-build": "rm -rf lib/ && mkdir -p lib && babel src/CountdownClock/CountdownClock.js --out-file lib/countdown-clock.js --ignore __tests__,__mocks__",
     "dev": "node server",
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --config webpack.prod.config.js",
@@ -22,6 +23,8 @@
   },
   "devDependencies": {
     "autoprefixer-core": "6.0.1",
+    "babel": "6.3.26",
+    "babel-cli": "6.3.17",
     "babel-core": "6.1.21",
     "babel-eslint": "4.1.5",
     "babel-loader": "6.0.1",

@@ -1,10 +1,10 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 
-const styles = require('./CountdownTimer.css');
+const styles = require('./CountdownClock.css');
 
-class CountdownTimer extends Component {
-  static displayName = 'CountdownTimer';
+class CountdownClock extends Component {
+  static displayName = 'CountdownClock';
 
   static propTypes = {
     deadline: PropTypes.string.isRequired,
@@ -14,7 +14,7 @@ class CountdownTimer extends Component {
     colorFinished: PropTypes.string,
     colorGoing: PropTypes.string,
     textColor: PropTypes.string,
-  }
+  };
 
   constructor() {
     super();
@@ -68,7 +68,7 @@ class CountdownTimer extends Component {
       minute: ('0' + time.minutes).slice(-2),
       second: ('0' + time.seconds).slice(-2),
     }, this._updateClock);
-  }
+  };
 
   _updateClock = () => {
     const time = this._getTime(this.state.deadline);
@@ -93,7 +93,7 @@ class CountdownTimer extends Component {
     if (time.total <= 0) {
       clearTimeout(timeinterval);
     }
-  }
+  };
 
   _getTime(endtime) {
     const total   = Date.parse(endtime) - Date.parse(new Date());
@@ -124,7 +124,7 @@ class CountdownTimer extends Component {
     });
 
     return parsedFormat;
-  }
+  };
 
   _setupCanvas = () => {
     this._parsedFormatArr.map(format => {
@@ -136,7 +136,7 @@ class CountdownTimer extends Component {
       this[propsName].textBaseline = 'middle';
       this[propsName].font = 'bold 20px Arial';
     });
-  }
+  };
 
   _drawBackground = () => {
     this._parsedFormatArr.map(format => {
@@ -148,7 +148,7 @@ class CountdownTimer extends Component {
       this[propsName].arc(this._radius, this._radius, this._radius / 1.3, Math.PI * 2, 0, true);
       this[propsName].fill();
     });
-  }
+  };
 
   _clearTimer = () => {
     this._parsedFormatArr.map(format => {
@@ -156,7 +156,7 @@ class CountdownTimer extends Component {
       this[propsName].clearRect(0, 0, 2000, 2000);
     });
     this._drawBackground();
-  }
+  };
 
   _drawTimer = () => {
     this._parsedFormatArr.map(format => {
@@ -175,7 +175,7 @@ class CountdownTimer extends Component {
       this[propsName].arc(this._radius, this._radius, this._radius / 1.3, Math.PI * percent, Math.PI * 1.5, true);
       this[propsName].fill();
     });
-  }
+  };
 
   render() {
     const format = (this._parseFormat(this._format));
@@ -236,4 +236,4 @@ class CountdownTimer extends Component {
   }
 }
 
-export default CountdownTimer;
+export default CountdownClock;

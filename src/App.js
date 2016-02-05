@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CountdownTimer from './CountdownTimer/CountdownTimer';
+import CountdownClock from './CountdownClock/CountdownClock';
 import Colors from 'utils/ColorCollection';
 
 export default class App extends Component {
@@ -8,7 +8,7 @@ export default class App extends Component {
   }
   render() {
     return (
-        <CountdownTimer
+        <CountdownClock
           deadline={'Oct 29 2020 00:00:50 UTC+0800'}
           options={{format: 'year-day-hour-minute-second'}}
           size="180px"
